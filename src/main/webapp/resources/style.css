@@ -1,0 +1,21 @@
+body{
+    background-color: #2b2b2b;
+    color: white;
+}
+#tweetText{
+    resize: none;
+}
+a{
+    color: orange;
+}
+.username{
+    color: greenyellow;
+}
+
+.comment{
+
+}
+
+.new_message{
+    font-weight: 900;
+}
