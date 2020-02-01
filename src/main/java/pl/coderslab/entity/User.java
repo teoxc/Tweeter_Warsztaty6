@@ -1,30 +1,42 @@
 package pl.coderslab.entity;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
 
 @Entity
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    @Column(length = 20, unique = true)
-    private String login;
+    @Column(length = 20)
+    @NotEmpty
+    @Size(max = 20, min = 3)
+    private String userName;
+    @NotEmpty
+    @Size(min = 3)
     private String password;
+    @NotEmpty
+    @Size(max = 20, min = 3)
     private String firstName;
+    @NotEmpty
+    @Size(max = 20, min = 3)
     private String lastName;
-    @Column(unique = true)
+    @NotEmpty
+    @Email
     private String email;
 
     public long getId() {
         return id;
     }
 
-    public String getLogin() {
-        return login;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setLogin(String login) {
-        this.login = login;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public String getPassword() {
