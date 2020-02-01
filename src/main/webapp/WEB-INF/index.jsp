@@ -9,7 +9,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="resources/style.css">
     <title>Strona główna</title>
     <meta charset="UTF-8">
 </head>
