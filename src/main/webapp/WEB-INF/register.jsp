@@ -26,7 +26,6 @@
             <span style="color:red">Nazwa zajęta</span><%
         }
     %><br/><br/>
-
     Hasło: <form:input path="password" type="password"/><form:errors path="password" style="color: red"/><br/><br/>
     Imię: <form:input path="firstName" type="text"/><form:errors path="firstName" style="color: red"/><br/><br/>
     Nazwisko: <form:input path="lastName" type="text"/><form:errors path="lastName" style="color: red"/><br/><br/>

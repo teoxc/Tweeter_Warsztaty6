@@ -1,4 +1,3 @@
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%--
   Created by IntelliJ IDEA.
   User: teo
@@ -17,8 +16,16 @@
 <body>
 <div id="header"></div><%@ include file="fragments/header.jsp"%></body>
 <h1>Zaloguj się</h1>
-    <form:form>
-        firmularz
-    </form:form>
+    <form method="post" action="login">
+        <%
+            String loginError = (String) request.getAttribute("loginError");
+            if (loginError == "true"){%>
+        <span style="color:red">Błędna nazwa użytkownika lub hasło</span><br/><%
+        }
+        %>
+        Nazwa użytkownika: <input type="text" name="userName"/><br/><br/>
+        Hasło: <input type="password" name="password"/><br/><br/>
+        <input type="submit" value="Zaloguj"/>
+    </form>
 </body>
 </html>
